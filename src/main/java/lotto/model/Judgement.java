@@ -28,8 +28,8 @@ public class Judgement {
     }
 
     // 당첨 로또 번호 중복 확인
-    public void checkLotto(List<Integer> winLotto, int tempNumber) {
-        if (winLotto.contains(tempNumber)) {
+    public void checkLotto(List<Integer> winLotto, int number) {
+        if (winLotto.contains(number)) {
             System.out.println("[ERROR] 중복되지 않는 1부터 45 사이의 숫자 6개를 입력해주세요.");
             throw new IllegalArgumentException();
         }

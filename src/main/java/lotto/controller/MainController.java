@@ -1,7 +1,7 @@
 package lotto.controller;
 
 import lotto.model.Buy;
-import lotto.model.Data;
+import lotto.model.Result;
 import lotto.model.Judgement;
 import lotto.model.Lotto;
 import lotto.view.InputView;
@@ -13,8 +13,9 @@ public class MainController {
     InputView inputView;
     Judgement judgement;
     Buy buy;
-    Data data;
+    Result result;
 
+    // 게임 시작 - 로또 구매 금액 입력과 로또 발행
     public void startGame() {
         try {
             String strMoney = inputView.buyLotto();
@@ -28,20 +29,32 @@ public class MainController {
         }
     }
 
+    // 우승 로또 생성
     public void setWinLotto() {
         try {
-            String numbers = inputView.winLotto();
-            String[] strNumbers = numbers.split(",");
+            String strNumbers = inputView.winLotto();
+            String[] tempNumbers = strNumbers.split(",");
             List<Integer> winLotto= new ArrayList<>();
-            for(String number : strNumbers) {
-                int tempNumber = judgement.checkRange(judgement.checkInt(number));
-                judgement.checkLotto(winLotto, tempNumber);
-                winLotto.add(tempNumber);
+            for(String strNnumber : tempNumbers) {
+                int number = judgement.checkRange(judgement.checkInt(strNnumber));
+                judgement.checkLotto(winLotto, number);
+                winLotto.add(number);
             }
+            setWinBonus(winLotto);
         } catch (IllegalArgumentException e) {
             setWinLotto();
         }
     }
 
-
+    // 우승 보너스 번호 생성
+    public void setWinBonus(List<Integer> winLotto) {
+        try {
+            String strNumber = inputView.winBonus();
+            int bonus = judgement.checkRange(judgement.checkInt(strNumber));
+            judgement.checkBonus(winLotto, bonus);
+            result = new Result(judgement, winLotto, bonus);
+        } catch (IllegalArgumentException e) {
+            setWinBonus(winLotto);
+        }
+    }
 }
