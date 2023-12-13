@@ -11,7 +11,7 @@ public class OutputView {
     // 로또 발행 내역 출력
     public void printLotto(List<Lotto> lottoGames) {
         System.out.println();
-        System.out.println(lottoGames.size() + "개 구매했습니다.");
+        System.out.println(lottoGames.size() + "개를 구매했습니다.");
         for (Lotto lotto : lottoGames) {
             System.out.println(lotto.getNumbers());
         }
