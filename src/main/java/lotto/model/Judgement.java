@@ -17,31 +17,28 @@ public class Judgement {
     }
 
     // 당첨 로또 번호 1~45 사이 유효성 검사
-    public void checkRange(int number) {
+    public int checkRange(int number) {
         int minNumber = 1;
         int maxNumber = 45;
-        if(number < minNumber || number > maxNumber) {
+        if (number < minNumber || number > maxNumber) {
             System.out.println("[ERROR] 로또 번호는 1부터 45 사이의 숫자여야 합니다.");
             throw new IllegalArgumentException();
         }
+        return number;
     }
 
     // 당첨 로또 번호 중복 확인
-    public void checkLotto(List<Integer> winLotto) {
-        int standard = 0;
-        for (int i = 1; i < winLotto.size(); i++) {
-            if(winLotto.get(standard) == winLotto.get(i)) {
-                System.out.println("[ERROR] 중복되지 않는 1부터 45 사이의 숫자 6개를 입력해주세요.");
-                throw new IllegalArgumentException();
-            }
-            standard++;
+    public void checkLotto(List<Integer> winLotto, int tempNumber) {
+        if (winLotto.contains(tempNumber)) {
+            System.out.println("[ERROR] 중복되지 않는 1부터 45 사이의 숫자 6개를 입력해주세요.");
+            throw new IllegalArgumentException();
         }
     }
 
     // 보너스 번호 중복 확인
     public void checkBonus(List<Integer> winLotto, int bonus) {
         for (int i = 0; i < winLotto.size(); i++) {
-            if(bonus == winLotto.get(i)) {
+            if (bonus == winLotto.get(i)) {
                 System.out.println("[ERROR] 로또 번호와 중복되지 않는 1부터 45 사이의 숫자 1개를 입력해주세요.");
                 throw new IllegalArgumentException();
             }
