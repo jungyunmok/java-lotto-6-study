@@ -14,8 +14,7 @@ public class Buy {
     }
 
     // 로또 구매 1000단위
-    public int countLotto(String strMoney) {
-        int money = judgement.checkInt(strMoney);
+    public int countLotto(int money) {
         int count = 0;
         if (money % 1000 != 0) {
             System.out.println("[ERROR] 구매 금액은 1,000원 단위로 입력해주세요.");
