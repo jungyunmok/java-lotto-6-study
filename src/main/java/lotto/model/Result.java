@@ -27,7 +27,7 @@ public class Result {
                 correctCount++;
             }
         }
-        if (userLotto.contains(WIN_BONUS)) {
+        if (correctCount == 5.0 && userLotto.contains(WIN_BONUS)) {
             correctCount += 0.5;
         }
         return correctCount;
@@ -54,11 +54,10 @@ public class Result {
         double rate;
         for (Prize prize : Prize.values()) {
             int count = rankCount.get(prize.getCorrectCount());
-            if (count > 0) {
-                amount += prize.getMoney() * count;
-            }
+            amount += prize.getMoney() * count;
         }
-        rate = ((double)amount / LOTTO_GAMES.size()) * 100;
+        System.out.println(amount + "당첨금액");
+        rate = ((double) amount / (LOTTO_GAMES.size() * 1000)) * 100;
         return rate;
     }
 }

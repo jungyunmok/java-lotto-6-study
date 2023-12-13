@@ -25,13 +25,13 @@ public class OutputView {
         }
     }
 
-    public void lottoResult(Map<Double, Integer> rankCount, double rate) {
+    public void lottoResult(Map<Double, Integer> rankCount, double winRate) {
         System.out.println();
         System.out.println("당첨 통계");
         System.out.println("---");
         for (int i = 0; i < 5; i++) {
             printPrize(rankCount, i);
         }
-        System.out.println("총 수익률은 " + String.format("%.1f", rate) + "입니다.");
+        System.out.println("총 수익률은 " + String.format("%.1f", winRate) + "입니다.");
     }
 }

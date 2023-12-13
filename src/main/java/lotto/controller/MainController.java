@@ -9,6 +9,7 @@ import lotto.view.OutputView;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 public class MainController {
     InputView inputView;
@@ -66,5 +67,12 @@ public class MainController {
         } catch (IllegalArgumentException e) {
             setWinBonus(lottoGames, winLotto);
         }
+    }
+
+    // 게임 결과
+    public void gameResult() {
+        Map<Double, Integer> rankCount = result.winGame();
+        double winRate = result.winRate(rankCount);
+        outputView.lottoResult(rankCount, winRate);
     }
 }
