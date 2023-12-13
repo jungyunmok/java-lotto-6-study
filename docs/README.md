@@ -18,12 +18,12 @@
   - [x] 3등: 5개 번호 일치 / 1,500,000원 
   - [x] 4등: 4개 번호 일치 / 50,000원 
   - [x] 5등: 3개 번호 일치 / 5,000원
-- [ ] 당첨 내역 저장 - Result
+- [x] 당첨 내역 산출 - Result#winGame()
 - [ ] 수익률 계산 - Result#winRate()
--[ ] 예외처리 - Exception
-  - [ ] 잘못된 값 입력시 IllegalArgumentException 발생
-  - [ ] exception 발생 후 "[ERROR]"로 시작하는 에러 문구 출력
-  - [ ] 해당 부분부터 다시 입력받음
+-[x] 예외처리
+  - [x] 잘못된 값 입력시 IllegalArgumentException 발생
+  - [x] exception 발생 후 "[ERROR]"로 시작하는 에러 문구 출력
+  - [x] 해당 부분부터 다시 입력받음
 
 ## 입력
 - [x] 로또 구매 - InputView#buyLotto()
@@ -32,11 +32,11 @@
 - [x] 보너스 번호 입력 - InputView#winBonus()
 
 ## 출력
-- [ ] 구입한 로또 출력 - OutputView#printLotto()
-  - [ ] 발행한 로또 수량 출력
-  - [ ] 발행한 로또 번호 출력
-    - [ ] 번호는 쉼표로 구분
-    - [ ] 오름차순으로 정렬하여 보여줌
+- [x] 구입한 로또 출력 - OutputView#printLotto()
+  - [x] 발행한 로또 수량 출력
+  - [x] 발행한 로또 번호 출력
+    - [x] 번호는 쉼표로 구분
+    - [x] 오름차순으로 정렬하여 보여줌
 - [ ] 당첨 내역 출력 - OutputView#lottoResult()
   - [ ] 수익률 출력
       - [ ] 소수점 둘째 자리에서 반올림

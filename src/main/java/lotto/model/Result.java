@@ -1,6 +1,11 @@
 package lotto.model;
 
+import lotto.constant.Prize;
+
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class Result {
     Judgement judgement;
@@ -8,22 +13,38 @@ public class Result {
     private final List<Integer> WIN_LOTTO;
     private final int WIN_BONUS;
 
-    public Result(Judgement judgement, List<Lotto> lottoGames, List<Integer> winLotto, int winBonus) {
-        this.judgement = judgement;
+    public Result(List<Lotto> lottoGames, List<Integer> winLotto, int winBonus) {
         this.LOTTO_GAMES = lottoGames;
         this.WIN_LOTTO = winLotto;
         this.WIN_BONUS = winBonus;
     }
 
-    public List<Lotto> getLottoGames() {
-        return LOTTO_GAMES;
+    // 당첨 로또와 비교해서 등수 산출
+    private double correctNumber(List<Integer> userLotto) {
+        double correctCount = 0.0;
+        for (int number : WIN_LOTTO) {
+            if (userLotto.contains(number)) {
+                correctCount++;
+            }
+        }
+        if (userLotto.contains(WIN_BONUS)) {
+            correctCount += 0.5;
+        }
+        return correctCount;
     }
 
-    public List<Integer> getWinLotto() {
-        return WIN_LOTTO;
-    }
-
-    public int getWinBonus() {
-        return WIN_BONUS;
+    // 당첨 내역 산출
+    public Map<Double, Integer> winRate() {
+        Map<Double, Integer> rankCount = new HashMap<>();
+        for (Prize prize : Prize.values()) {
+            rankCount.put(prize.getCorrectCount(), 0);
+        }
+        for (Lotto lotto : LOTTO_GAMES) {
+            double rank = correctNumber(lotto.getNumbers());
+            if (rank >= 3) {
+                rankCount.put(rank, rankCount.get(rank) + 1);
+            }
+        }
+        return rankCount;
     }
 }

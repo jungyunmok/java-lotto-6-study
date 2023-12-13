@@ -62,7 +62,7 @@ public class MainController {
             String strNumber = inputView.winBonus();
             int bonus = judgement.checkRange(judgement.checkInt(strNumber));
             judgement.checkBonus(winLotto, bonus);
-            result = new Result(judgement, lottoGames, winLotto, bonus);
+            result = new Result(lottoGames, winLotto, bonus);
         } catch (IllegalArgumentException e) {
             setWinBonus(lottoGames, winLotto);
         }
