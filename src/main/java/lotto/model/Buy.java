@@ -7,6 +7,7 @@ public class Buy {
         this.judgement = judgement;
     }
 
+    // 로또 구매 1000단위
     public int newLott(String strMoney) {
         int money = judgement.checkInt(strMoney);
         int count = 0;

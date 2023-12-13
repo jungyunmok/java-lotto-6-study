@@ -7,7 +7,7 @@
   - [x] 1000으로 떨어지지 않는 경우 예외처리
 - [x] 로또 번호 유효성 검사 - Judgement#checkInt()
   - [x] 숫자인지 체크
-  - [ ] 숫자 범위는 1~45
+  - [x] 숫자 범위는 1~45 - Judgement#checkRange()
   - [ ] 서로 중복되지 않는 6개의 숫자
   - [ ] 로또 번호와 중복되지 않는 보너스 번호 1개
 - [x] 당첨 번호 판별 - Judgement#checkLotto()
