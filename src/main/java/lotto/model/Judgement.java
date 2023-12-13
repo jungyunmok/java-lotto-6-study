@@ -27,7 +27,7 @@ public class Judgement {
     }
 
     // 당첨 로또와 비교해서 등수 산출
-    public double checkLotto(List<Integer> userLotto, int userBonus, List<Integer> winLotto, int winBonus) {
+    public double correctNumber(List<Integer> userLotto, int userBonus, List<Integer> winLotto, int winBonus) {
         double correctCount = 0.0;
         for (int number : userLotto) {
             if (winLotto.contains(number)) {

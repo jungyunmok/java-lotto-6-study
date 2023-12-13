@@ -1,16 +1,16 @@
 # 기능 구현 목록
 
 ## 기능
-- [x] 로또 구메 - Buy#newLotto()
+- [x] 로또 구메 - Buy#countLotto()
   - [x] 1000단위로 입력
-  - [x] 금액을 입력하면 1,000원당 1장 발행
+  - [x] 금액을 입력하면 1,000원당 1장 발행 - Buy#generateLotto()
   - [x] 1000으로 떨어지지 않는 경우 예외처리
-- [x] 로또 번호 유효성 검사 - Judgement#checkInt()
+- [x] 당첨 로또 번호 유효성 검사 - Judgement#checkInt()
   - [x] 숫자인지 체크
   - [x] 숫자 범위는 1~45 - Judgement#checkRange()
-  - [ ] 서로 중복되지 않는 6개의 숫자
+  - [x] 서로 중복되지 않는 6개의 숫자
   - [ ] 로또 번호와 중복되지 않는 보너스 번호 1개
-- [x] 당첨 번호 판별 - Judgement#checkLotto()
+- [x] 당첨 번호 판별 - Judgement#correctNumber()
   - [x] 사용자 로또와 당첨 로또를 비교
 - [x] 당첨 기준 enum - Prize
   - [x] 1등: 6개 번호 일치 / 2,000,000,000원
