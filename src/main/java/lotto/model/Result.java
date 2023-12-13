@@ -2,7 +2,6 @@ package lotto.model;
 
 import lotto.constant.Prize;
 
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -55,7 +54,6 @@ public class Result {
             int count = rankCount.get(prize.getCorrectCount());
             amount += prize.getMoney() * count;
         }
-        System.out.println(amount + "당첨금액");
         rate = ((double) amount / (LOTTO_GAMES.size() * 1000)) * 100;
         return rate;
     }

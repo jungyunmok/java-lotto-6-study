@@ -1,6 +1,7 @@
 package lotto.model;
 
-import java.util.ArrayList;
+import lotto.constant.LottoInfo;
+
 import java.util.List;
 
 public class Judgement {
@@ -18,7 +19,7 @@ public class Judgement {
 
     // 숫자 6개 여부 확인
     public void checkLength(int length) {
-        if (length != 6) {
+        if (length != LottoInfo.TOTAL_LENGTH) {
             System.out.println("[ERROR] 중복되지 않는 1부터 45 사이의 숫자 6개를 쉼표로 구분하여 입력해주세요.");
             throw new IllegalArgumentException();
         }
@@ -26,9 +27,7 @@ public class Judgement {
 
     // 당첨 로또 번호 1~45 사이 유효성 검사
     public int checkRange(int number) {
-        int minNumber = 1;
-        int maxNumber = 45;
-        if (number < minNumber || number > maxNumber) {
+        if (number < LottoInfo.MIN_NUMBER || number > LottoInfo.MAX_NUMBER) {
             System.out.println("[ERROR] 로또 번호는 1부터 45 사이의 숫자여야 합니다.");
             throw new IllegalArgumentException();
         }

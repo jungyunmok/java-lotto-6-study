@@ -1,5 +1,7 @@
 package lotto.model;
 
+import lotto.constant.LottoInfo;
+
 import java.util.Collections;
 import java.util.List;
 
@@ -16,8 +18,9 @@ public class Lotto {
         return numbers;
     }
 
+    // 6자리인지 길이 검사
     private void validate(List<Integer> numbers) {
-        if (numbers.size() != 6) {
+        if (numbers.size() != LottoInfo.TOTAL_LENGTH) {
             throw new IllegalArgumentException();
         }
     }
