@@ -5,18 +5,21 @@ import lotto.model.Result;
 import lotto.model.Judgement;
 import lotto.model.Lotto;
 import lotto.view.InputView;
+import lotto.view.OutputView;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class MainController {
     InputView inputView;
+    OutputView outputView;
     Judgement judgement;
     Buy buy;
     Result result;
 
     public MainController() {
         inputView = new InputView();
+        outputView = new OutputView();
         judgement = new Judgement();
         buy = new Buy();
     }
@@ -28,7 +31,7 @@ public class MainController {
             int money = judgement.checkInt(strMoney);
             int count = buy.countLotto(money);
             List<Lotto> lottoGames = buy.generateLotto(count);
-            // 구매 로또 출력
+            outputView.printLotto(lottoGames);
             setWinLotto(lottoGames);
         } catch (IllegalArgumentException e) {
             startGame();

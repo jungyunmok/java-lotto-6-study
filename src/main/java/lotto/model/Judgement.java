@@ -35,6 +35,14 @@ public class Judgement {
         }
     }
 
+    // 숫자 6개 여부 확인
+    public void validate(List<Integer> winLotto) {
+        if (winLotto.size() != 6) {
+            System.out.println("[ERROR] 중복되지 않는 1부터 45 사이의 숫자 6개를 쉼표로 구분하여 입력해주세요.");
+            throw new IllegalArgumentException();
+        }
+    }
+
     // 보너스 번호 중복 확인
     public void checkBonus(List<Integer> winLotto, int bonus) {
         for (int i = 0; i < winLotto.size(); i++) {

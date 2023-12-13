@@ -13,10 +13,6 @@ public class Result {
         this.LOTTO_GAMES = lottoGames;
         this.WIN_LOTTO = winLotto;
         this.WIN_BONUS = winBonus;
-//        System.out.println("당청 번호");
-//        System.out.println(winLotto + ", " + winBonus);
-//        System.out.println("구매 번호");
-//        System.out.println(lottoGames);
     }
 
     public List<Lotto> getLottoGames() {
