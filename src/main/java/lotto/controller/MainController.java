@@ -34,6 +34,7 @@ public class MainController {
             List<Lotto> lottoGames = buy.generateLotto(count);
             outputView.printLotto(lottoGames);
             setWinLotto(lottoGames);
+            gameResult();
         } catch (IllegalArgumentException e) {
             startGame();
         }
