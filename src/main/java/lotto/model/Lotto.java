@@ -15,8 +15,7 @@ public class Lotto {
     }
 
     public List<Integer> getNumbers() {
-        numbers.stream().sorted().collect(Collectors.toList());
-        return numbers;
+        return numbers.stream().sorted().collect(Collectors.toList());
     }
 
     // 중복없는 숫자 6개인지 검사
