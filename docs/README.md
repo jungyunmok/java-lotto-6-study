@@ -28,16 +28,14 @@
 - [ ] 로또 구매 - InputView#buyLotto()
   - [x] 로또 금액 입력
     - [ ] 1000단위로 입력
-  - [ ] 로또 번호 입력
-    - [ ] 번호는 쉼표로 구분
-  - [ ] 보너스 번호 입력
 - [ ] 로또 당첨 번호 입력 - InputView#winLotto()
-  - [ ] 보너스 번호 입력
+- [ ] 보너스 번호 입력 - InputView#winBonus()
 
 ## 출력
 - [ ] 구입한 로또 출력 - OutputView#printLotto()
   - [ ] 발행한 로또 수량 출력
   - [ ] 발행한 로또 번호 출력
+    - [ ] 번호는 쉼표로 구분
     - [ ] 오름차순으로 정렬하여 보여줌
 - [ ] 당첨 내역 출력 - OutputView#lottoResult()
   - [ ] 수익률 출력

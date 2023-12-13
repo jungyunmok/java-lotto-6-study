@@ -8,4 +8,10 @@ public class InputView {
         String money = Console.readLine();
         return money;
     }
+
+    public String winLotto() {
+        System.out.println("당첨 번호를 입력해 주세요.");
+        String numbers = Console.readLine();
+        return numbers;
+    }
 }
