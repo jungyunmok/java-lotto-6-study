@@ -8,8 +8,7 @@ import java.util.List;
 import java.util.Map;
 
 public class Result {
-    Judgement judgement;
-    public List<Lotto> LOTTO_GAMES;
+    private final List<Lotto> LOTTO_GAMES;
     private final List<Integer> WIN_LOTTO;
     private final int WIN_BONUS;
 

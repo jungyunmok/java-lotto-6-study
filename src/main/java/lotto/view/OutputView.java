@@ -32,6 +32,6 @@ public class OutputView {
         for (int i = 0; i < 5; i++) {
             printPrize(rankCount, i);
         }
-        System.out.println("총 수익률은 " + String.format("%.1f", winRate) + "입니다.");
+        System.out.println("총 수익률은 " + String.format("%.1f", winRate) + "%입니다.");
     }
 }
