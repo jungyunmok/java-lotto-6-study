@@ -16,6 +16,14 @@ public class Judgement {
         return number;
     }
 
+    // 숫자 6개 여부 확인
+    public void checkLength(int length) {
+        if (length != 6) {
+            System.out.println("[ERROR] 중복되지 않는 1부터 45 사이의 숫자 6개를 쉼표로 구분하여 입력해주세요.");
+            throw new IllegalArgumentException();
+        }
+    }
+
     // 당첨 로또 번호 1~45 사이 유효성 검사
     public int checkRange(int number) {
         int minNumber = 1;
@@ -31,14 +39,6 @@ public class Judgement {
     public void checkLotto(List<Integer> winLotto, int number) {
         if (winLotto.contains(number)) {
             System.out.println("[ERROR] 중복되지 않는 1부터 45 사이의 숫자 6개를 입력해주세요.");
-            throw new IllegalArgumentException();
-        }
-    }
-
-    // 숫자 6개 여부 확인
-    public void validate(List<Integer> winLotto) {
-        if (winLotto.size() != 6) {
-            System.out.println("[ERROR] 중복되지 않는 1부터 45 사이의 숫자 6개를 쉼표로 구분하여 입력해주세요.");
             throw new IllegalArgumentException();
         }
     }

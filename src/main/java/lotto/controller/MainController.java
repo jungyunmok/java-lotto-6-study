@@ -43,6 +43,7 @@ public class MainController {
         try {
             String strNumbers = inputView.winLotto();
             String[] tempNumbers = strNumbers.split(",");
+            judgement.checkLength(tempNumbers.length);
             List<Integer> winLotto = new ArrayList<>();
             for (String strNnumber : tempNumbers) {
                 int number = judgement.checkRange(judgement.checkInt(strNnumber));
