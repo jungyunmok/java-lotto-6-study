@@ -3,7 +3,6 @@ package lotto.model;
 import lotto.constant.LottoInfo;
 
 import java.util.Collections;
-import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -25,8 +24,8 @@ public class Lotto {
         if (numbers.size() != LottoInfo.TOTAL_LENGTH) {
             throw new IllegalArgumentException();
         }
-        for(int number : numbers) {
-            if(Collections.frequency(numbers, number) > 1) {
+        for (int number : numbers) {
+            if (Collections.frequency(numbers, number) > 1) {
                 throw new IllegalArgumentException();
             }
         }
