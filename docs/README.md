@@ -2,6 +2,7 @@
 
 ## 기능
 - [ ] 로또 구메 - Buy
+  - [ ] 1000단위로 입력
   - [ ] 금액을 입력하면 1,000원당 1장 발행
   - [ ] 1000으로 떨어지지 않는 경우 예외처리
 - [x] 로또 번호 유효성 검사 - Judgement#checkInt()
@@ -25,11 +26,10 @@
   - [ ] 해당 부분부터 다시 입력받음
 
 ## 입력
-- [ ] 로또 구매 - InputView#buyLotto()
+- [x] 로또 구매 - InputView#buyLotto()
   - [x] 로또 금액 입력
-    - [ ] 1000단위로 입력
-- [ ] 로또 당첨 번호 입력 - InputView#winLotto()
-- [ ] 보너스 번호 입력 - InputView#winBonus()
+- [x] 로또 당첨 번호 입력 - InputView#winLotto()
+- [x] 보너스 번호 입력 - InputView#winBonus()
 
 ## 출력
 - [ ] 구입한 로또 출력 - OutputView#printLotto()
