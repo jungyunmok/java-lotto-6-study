@@ -34,17 +34,31 @@ public class Result {
     }
 
     // 당첨 내역 산출
-    public Map<Double, Integer> winRate() {
+    public Map<Double, Integer> winGame() {
         Map<Double, Integer> rankCount = new HashMap<>();
         for (Prize prize : Prize.values()) {
             rankCount.put(prize.getCorrectCount(), 0);
         }
         for (Lotto lotto : LOTTO_GAMES) {
             double rank = correctNumber(lotto.getNumbers());
-            if (rank >= 3) {
+            if (rank >= Prize.FIFTH.getCorrectCount()) {
                 rankCount.put(rank, rankCount.get(rank) + 1);
             }
         }
         return rankCount;
+    }
+
+    // 수익률 계산
+    public double winRate(Map<Double, Integer> rankCount) {
+        int amount = 0;
+        double rate;
+        for (Prize prize : Prize.values()) {
+            int count = rankCount.get(prize.getCorrectCount());
+            if (count > 0) {
+                amount += prize.getMoney() * count;
+            }
+        }
+        rate = ((double)amount / LOTTO_GAMES.size()) * 100;
+        return rate;
     }
 }

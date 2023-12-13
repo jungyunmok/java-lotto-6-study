@@ -19,7 +19,7 @@
   - [x] 4등: 4개 번호 일치 / 50,000원 
   - [x] 5등: 3개 번호 일치 / 5,000원
 - [x] 당첨 내역 산출 - Result#winGame()
-- [ ] 수익률 계산 - Result#winRate()
+- [x] 수익률 계산 - Result#winRate()
 -[x] 예외처리
   - [x] 잘못된 값 입력시 IllegalArgumentException 발생
   - [x] exception 발생 후 "[ERROR]"로 시작하는 에러 문구 출력
@@ -39,4 +39,4 @@
     - [x] 오름차순으로 정렬하여 보여줌
 - [ ] 당첨 내역 출력 - OutputView#lottoResult()
   - [ ] 수익률 출력
-      - [ ] 소수점 둘째 자리에서 반올림
+    - [ ] 소수점 둘째 자리에서 반올림
