@@ -1,11 +1,11 @@
 package lotto.constant;
 
 public enum Prize {
-    FIRST(4, 6.0, "1등", "6개 일치", 2000000000),
-    SECOND(3, 5.5, "2등", "5개 일치, 보너스 볼 일치", 30000000),
+    FIRST(0, 6.0, "1등", "6개 일치", 2000000000),
+    SECOND(1, 5.5, "2등", "5개 일치, 보너스 볼 일치", 30000000),
     THIRD(2, 5.0, "3등", "5개 일치", 1500000),
-    FOURTH(1, 4.0, "4등", "4개 일치", 50000),
-    FIFTH(0, 3.0, "5등", "3개 일치", 5000);
+    FOURTH(3, 4.0, "4등", "4개 일치", 50000),
+    FIFTH(4, 3.0, "5등", "3개 일치", 5000);
 
     private final int INDEX;
     private final double CORRECT_COUNT;

@@ -20,7 +20,7 @@ public class OutputView {
         DecimalFormat df = new DecimalFormat("###,###");
         for (Prize prize : Prize.values()) {
             if (prize.getINDEX() == i) {
-                System.out.println(prize.getDescription() + " (" + df.format(prize.getMoney()) + "원) - " + rankCount.get(prize.getCorrectCount()) + "개");
+                System.out.println(prize.getRank() + ": " + prize.getDescription() + " (" + df.format(prize.getMoney()) + "원) - " + rankCount.get(prize.getCorrectCount()) + "개");
             }
         }
     }
