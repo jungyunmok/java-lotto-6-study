@@ -38,6 +38,16 @@ public class Judgement {
         }
     }
 
+    // 보너스 번호 중복 확인
+    public void checkBonus(List<Integer> winLotto, int bonus) {
+        for (int i = 0; i < winLotto.size(); i++) {
+            if(bonus == winLotto.get(i)) {
+                System.out.println("[ERROR] 로또 번호와 중복되지 않는 1부터 45 사이의 숫자 1개를 입력해주세요.");
+                throw new IllegalArgumentException();
+            }
+        }
+    }
+
     // 당첨 로또와 비교해서 등수 산출
     public double correctNumber(List<Integer> userLotto, int userBonus, List<Integer> winLotto, int winBonus) {
         double correctCount = 0.0;
