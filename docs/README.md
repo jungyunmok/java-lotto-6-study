@@ -8,8 +8,8 @@
 - [x] 당첨 로또 번호 유효성 검사 - Judgement#checkInt()
   - [x] 숫자인지 체크
   - [x] 숫자 범위는 1~45 - Judgement#checkRange()
-  - [x] 서로 중복되지 않는 6개의 숫자
-  - [ ] 로또 번호와 중복되지 않는 보너스 번호 1개
+  - [x] 서로 중복되지 않는 6개의 숫자 - Judgement#checkLotto()
+  - [ ] 로또 번호와 중복되지 않는 보너스 번호 1개 - Judgement#checkBonus()
 - [x] 당첨 번호 판별 - Judgement#correctNumber()
   - [x] 사용자 로또와 당첨 로또를 비교
 - [x] 당첨 기준 enum - Prize
