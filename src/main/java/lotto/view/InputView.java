@@ -12,6 +12,7 @@ public class InputView {
 
     // 당첨 번호 입력
     public String winLotto() {
+        System.out.println();
         System.out.println("당첨 번호를 입력해 주세요.");
         String numbers = Console.readLine();
         return numbers;
@@ -19,6 +20,7 @@ public class InputView {
 
     // 보너스 번호 입력
     public String winBonus() {
+        System.out.println();
         System.out.println("보너스 번호를 입력해 주세요.");
         String bonus = Console.readLine();
         return bonus;
